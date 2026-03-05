@@ -32,11 +32,19 @@ def index(lang):
     if lang not in SUPPORTED_LANGS:
         abort(404)
 
-    posts = [p for p in flatpages if p.path.startswith(f"{lang}/{POST_DIR}") or (lang==DEFAULT_LANG and p.path.startswith(POST_DIR))]
-    posts.sort(key=lambda item: item['date'], reverse=True)
+    posts = [
+        p for p in flatpages
+        if p.path.startswith(f"{lang}/{POST_DIR}")
+        or (lang == DEFAULT_LANG and p.path.startswith(POST_DIR))
+    ]
+    posts.sort(key=lambda item: item.meta.get('date', ''), reverse=True)
 
-    cards = [p for p in flatpages if p.path.startswith(f"{lang}/{PORT_DIR}") or (lang==DEFAULT_LANG and p.path.startswith(PORT_DIR))]
-    cards.sort(key=lambda item: item['title'])
+    cards = [
+        p for p in flatpages
+        if p.path.startswith(f"{lang}/{PORT_DIR}")
+        or (lang == DEFAULT_LANG and p.path.startswith(PORT_DIR))
+    ]
+    cards.sort(key=lambda item: item.meta.get('title', ''))
 
     # Настройки
     with open('settings.txt', encoding='utf8') as config:
