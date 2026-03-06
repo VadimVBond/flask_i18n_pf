@@ -19,6 +19,40 @@ app.config.from_object(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
 
+
+def _get_pages_for_lang(lang, section):
+    localized_prefix = f"{lang}/{section}"
+    localized_pages = [p for p in flatpages if p.path.startswith(localized_prefix)]
+    if localized_pages:
+        return localized_pages
+
+    if lang == DEFAULT_LANG:
+        return [p for p in flatpages if p.path.startswith(section)]
+
+    default_localized_prefix = f"{DEFAULT_LANG}/{section}"
+    fallback_pages = [
+        p for p in flatpages
+        if p.path.startswith(default_localized_prefix) or p.path.startswith(section)
+    ]
+    return fallback_pages
+
+
+def _get_page_by_name(lang, section, name):
+    candidates = [f"{lang}/{section}/{name}"]
+
+    if lang == DEFAULT_LANG:
+        candidates.append(f"{section}/{name}")
+    else:
+        candidates.append(f"{DEFAULT_LANG}/{section}/{name}")
+        candidates.append(f"{section}/{name}")
+
+    for path in candidates:
+        page = flatpages.get(path)
+        if page:
+            return page
+
+    abort(404)
+
 # --- ROUTES ---
 
 # Корень → редирект на DEFAULT_LANG
@@ -32,18 +66,10 @@ def index(lang):
     if lang not in SUPPORTED_LANGS:
         abort(404)
 
-    posts = [
-        p for p in flatpages
-        if p.path.startswith(f"{lang}/{POST_DIR}")
-        or (lang == DEFAULT_LANG and p.path.startswith(POST_DIR))
-    ]
+    posts = _get_pages_for_lang(lang, POST_DIR)
     posts.sort(key=lambda item: item.meta.get('date', ''), reverse=True)
 
-    cards = [
-        p for p in flatpages
-        if p.path.startswith(f"{lang}/{PORT_DIR}")
-        or (lang == DEFAULT_LANG and p.path.startswith(PORT_DIR))
-    ]
+    cards = _get_pages_for_lang(lang, PORT_DIR)
     cards.sort(key=lambda item: item.meta.get('title', ''))
 
     # Настройки
@@ -53,7 +79,7 @@ def index(lang):
 
     # Теги
     tags = set()
-    for p in flatpages:
+    for p in posts:
         t = p.meta.get('tag')
         if t:
             tags.add(t.lower())
@@ -66,8 +92,7 @@ def blog(lang, name):
     if lang not in SUPPORTED_LANGS:
         abort(404)
 
-    path = f"{lang}/{POST_DIR}/{name}" if lang != DEFAULT_LANG else f"{POST_DIR}/{name}"
-    post = flatpages.get_or_404(path)
+    post = _get_page_by_name(lang, POST_DIR, name)
     return render_template('post.html', post=post, lang=lang)
 
 # Портфолио
@@ -76,8 +101,7 @@ def portfolio(lang, name):
     if lang not in SUPPORTED_LANGS:
         abort(404)
 
-    path = f"{lang}/{PORT_DIR}/{name}" if lang != DEFAULT_LANG else f"{PORT_DIR}/{name}"
-    card = flatpages.get_or_404(path)
+    card = _get_page_by_name(lang, PORT_DIR, name)
     return render_template('card.html', card=card, lang=lang)
 
 # CSS для Pygments
@@ -99,16 +123,14 @@ def index_generator():
 @freezer.register_generator
 def blog_generator():
     for lang in SUPPORTED_LANGS:
-        for p in flatpages:
-            if p.path.startswith(POST_DIR) or p.path.startswith(f"{DEFAULT_LANG}/{POST_DIR}"):
-                yield {'lang': lang, 'name': p.path.split('/')[-1]}
+        for p in _get_pages_for_lang(lang, POST_DIR):
+            yield {'lang': lang, 'name': p.path.split('/')[-1]}
 
 @freezer.register_generator
 def portfolio_generator():
     for lang in SUPPORTED_LANGS:
-        for c in flatpages:
-            if c.path.startswith(PORT_DIR) or c.path.startswith(f"{DEFAULT_LANG}/{PORT_DIR}"):
-                yield {'lang': lang, 'name': c.path.split('/')[-1]}
+        for c in _get_pages_for_lang(lang, PORT_DIR):
+            yield {'lang': lang, 'name': c.path.split('/')[-1]}
 
 # --- Main ---
 if __name__ == "__main__":
