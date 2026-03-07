@@ -15,9 +15,9 @@ body::before {
           <div class="col-lg-8 portfolio-info">
             <h3>{{ card.description }}</h3>
             <ul>
-              <li><strong>Категория</strong>: {{ card.category.title() }}</li>
-              <li><strong>Описание</strong>: {{ card.description }}</li>
-              <li><strong>Примечания</strong>: <a href="{{ card.link}}">{{ card.info }}</a></li>
+              <li><strong>{{ t('category') }}</strong>: {{ card.category.title() }}</li>
+              <li><strong>{{ t('description') }}</strong>: {{ card.description }}</li>
+              <li><strong>{{ t('notes') }}</strong>: <a href="{{ card.link}}">{{ card.info }}</a></li>
             </ul>
             <p>
               {{ card.html|safe }}

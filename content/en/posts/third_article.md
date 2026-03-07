@@ -1,29 +1,31 @@
 ---
 lang: en
----
-﻿title: Flask с нуля
+title: Flask from Scratch
 date: 2022-06-14
-description: Функции представления и маршруты
+description: View functions and routes
 tag: flask
-project: Курс по Flask для начинающих
-platform: Flask Практикум
+project: Flask Course for Beginners
+platform: Flask Workshop
 link: http://example.com
+---
 
-Начать знакомство с Flask можно с создания простого приложения, которое выводит “Hello World”. Создаем новый файл main.py и вводим следующий код.
+You can start learning Flask with a simple “Hello World” application:
 
-	from flask import Flask
+```python
+from flask import Flask
 
-	app = Flask(__name__)
+app = Flask(__name__)
 
-	@app.route('/')
-	def index():
-	    return 'Hello World'
+@app.route('/')
+def index():
+    return 'Hello World'
 
-	if __name__ == "__main__":
-	    app.run()
+if __name__ == "__main__":
+    app.run()
+```
 
-Это приложение “Hello World”, созданное с помощью фреймворка Flask. Чтобы запустить main.py, нужно выполнить следующую команду:
+Run the application with:
 
-	(env) python main.py
-	Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-
+```bash
+python main.py
+```

@@ -1,29 +1,12 @@
 ---
 lang: en
----
-﻿title: Парсим на Python
+title: Parsing with Python
 date: 2022-06-10
-description: Модуль Pyparsing для новичков
+description: Techniques for extracting data from text and web pages
 tag: python
-project: Курс по Python для начинающих
-platform: Python Практикум
+project: Advanced Python Course
+platform: Python Workshop
 link: http://example.com
+---
 
-Парсинг (синтаксический анализ) представляет собой процесс сопоставления последовательности слов или символов — так называемой формальной грамматике. Например, для строчки кода:
-
-	import matplotlib.pyplot  as plt
-
-
-имеет место следующая грамматика: сначала идёт ключевое слово import, потом название модуля или цепочка имён модулей, разделённых точкой, потом ключевое слово as, а за ним — наше название импортируемому модулю.
-
-В результате парсинга, например, может быть необходимо прийти к следующему выражению:
-
-	{ 'import': [ 'matplotlib', 'pyplot' ], 'as': 'plt' }
-
-
-Данное выражение представляет собой словарь Python, который имеет два ключа: 'import' и 'as'. Значением для ключа 'import' является список, в котором по порядку перечислены названия импортируемых модулей.
-
-Для парсинга как правило используют регулярные выражения. Для этого имеется модуль Python под названием re (regular expression — регулярное выражение). Если вам не доводилось работать с регулярными выражениями, их вид может вас испугать. Например, для строки кода 'import matplotlib.pyplot as plt' оно будет иметь вид:
-
-	r'^[ \t]*import +\D+\.\D+ +as \D+'
-
+Python is widely used for parsing source code, logs, and web content. Typical tools include regular expressions (`re`), HTML parsers, and custom tokenization logic. The key is to normalize input data and handle edge cases predictably.

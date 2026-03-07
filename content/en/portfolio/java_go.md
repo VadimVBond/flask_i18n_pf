@@ -1,17 +1,27 @@
 ---
 lang: en
----
-title: Адаптивный тренажер
-description: Платформа для интерактивной и адаптивной тренировки навыков программирования на Java и Go
+title: Adaptive Coding Trainer
+description: Interactive adaptive training platform for Java and Go
 category: EdTech
 icon: bx bx-message-detail
-info: Тренажер работает здесь
+info: The trainer is available online
 link: http://java.com
+---
 
-###Тренажер, который подстраивается под уровень студента
+### A platform that adapts to the student level
 
-Знакома ли вам ситуация, когда вы сдали задачу/работу на проверку, а результатов пришлось ждать неделю, т.к. проверяющий занят? Именно так обстоят дела в большинстве очных курсов. В JavaRush вы узнаёте результаты проверки задачи меньше чем через секунду, после нажатия кнопки «Проверить».
+Traditional courses often require days to check assignments. In adaptive platforms, feedback can be received almost instantly after submission.
 
-В Интернете много хороших книг, но читая книги программистом не станешь. Чтобы стать программистом, нужно много программировать. JavaRush — это онлайн-курс обучения программированию на Java, на 80% состоящий из практики. Именно то, что нужно чтобы стать Java‑программистом.
-
-Как в нашем веке вообще можно учиться только по книгам? Такой подход был инновационным в 17 веке, но не в 21. В JavaRush используются новейшие методики, которые делают ваше обучение легче, интересней и продуктивнее: визуализация, сторитейлинг, мотивация, геймификация и еще два десятка технологий, о которых вы даже не слышали.
+<<<<<<< ours
+<<<<<<< ours
+<<<<<<< ours
+The learning process focuses on practice: short theory blocks, immediate validation, and progressive task complexity.
+=======
+The learning process focuses on practice: short theory blocks, immediate validation, and progressive task complexity.
+>>>>>>> theirs
+=======
+The learning process focuses on practice: short theory blocks, immediate validation, and progressive task complexity.
+>>>>>>> theirs
+=======
+The learning process focuses on practice: short theory blocks, immediate validation, and progressive task complexity.
+>>>>>>> theirs

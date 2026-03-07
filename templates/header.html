@@ -36,6 +36,20 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
+      <div class="language-switcher" aria-label="Language switcher">
+        <a href="{{ url_for('index', lang='ru') }}"
+           class="language-flag{% if lang == 'ru' %} active{% endif %}"
+           title="Русский"
+           aria-label="Русский">🇷🇺</a>
+        <a href="{{ url_for('index', lang='en') }}"
+           class="language-flag{% if lang == 'en' %} active{% endif %}"
+           title="English"
+           aria-label="English">🇬🇧</a>
+        <a href="{{ url_for('index', lang='uk') }}"
+           class="language-flag{% if lang == 'uk' %} active{% endif %}"
+           title="Українська"
+           aria-label="Українська">🇺🇦</a>
+      </div>
       <!-- Навигация -->
       <div class="social-links">
         <a href="{{ telegram }}" class="telegram"><i class="fa fa-telegram"></i></a>

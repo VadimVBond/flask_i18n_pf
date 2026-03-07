@@ -79,6 +79,55 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+
+
+.language-switcher {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.language-flag {
+  position: relative;
+  display: inline-flex;
+  padding-top: 8px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-flag::after {
+  content: attr(aria-label);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.language-flag:hover::after,
+.language-flag:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.language-flag.active {
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 1px #1e90ff;
+}
 #header .social-links {
   margin-top: 40px;
   display: flex;
@@ -128,6 +177,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
+}
+#header.header-top .language-switcher {
+  margin-top: 0;
+  margin-right: 20px;
 }
 #header.header-top h1 {
   margin-right: auto;
@@ -232,6 +285,11 @@ h1, h2, h3, h4, h5, h6 {
   .navbar ul {
     display: none;
   }
+
+  .language-switcher {
+    margin-top: 15px;
+    justify-content: center;
+  }
 }
 .navbar-mobile {
   position: fixed;
@@ -303,6 +361,17 @@ section .container {
   section.section-show {
     top: 80px;
   }
+    #header.header-top .language-switcher {
+    margin-right: 55px;
+    gap: 6px;
+  }
+
+  #header.header-top .language-flag {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+}
 }
 
 .section-title h2 {

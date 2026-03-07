@@ -1,12 +1,12 @@
 ---
 lang: en
----
-﻿title: Django на практике
-date: 2022-06-11
-description: Определяем модели для сайта городской библиотеки
+title: Models in Django
+date: 2022-06-07
+description: Designing data structures with ORM
 tag: django
-project: Курс по Django для начинающих
-platform: Django Практикум
+project: Django Course
+platform: Django Workshop
 link: http://example.com
+---
 
-В этой статье показано, как определить модели для сайта местной библиотеки — модели представляют структуры данных, в которых мы хотим хранить данные нашего приложения, а также позволяют Django хранить данные в базе данных для нас (и модифицировать позже). Она раскрывает, что такое модель, как она объявляется и некоторые из основных типов полей. В ней также кратко показаны некоторые из основных способов доступа к данным модели.
+Django models describe database tables as Python classes. With ORM, you can create, query, and update records without writing raw SQL in most cases. Proper model design is the foundation of a clean and maintainable backend.

@@ -1,14 +1,14 @@
 ---
 lang: en
----
-﻿title: Python в машинном обучении
+title: Python in Machine Learning
 date: 2022-06-11
-description: Как Python упрощает сложные вещи
+description: How Python makes complex things easier
 tag: python
-project: Курс по Python - уровень 5
-platform: Python Практикум
+project: Python Course — Level 5
+platform: Python Workshop
 link: http://example.com
+---
 
-##Почему Питон используют для машинного обучения?
+## Why is Python used for machine learning?
 
-Несмотря на то, что за машинным обучением и искусственным интеллектом стоят сложные алгоритмы и процессы, простота Python позволяет создавать надежные системы. Разработчики могут полностью сосредоточиться на задачах, которые они пытаются решить при помощи ML, не отвлекаясь на технические нюансы языка.
+Machine learning and AI rely on complex algorithms, but Python's readability and concise syntax make implementation significantly easier. Developers can focus on business logic and model quality instead of low-level language details.

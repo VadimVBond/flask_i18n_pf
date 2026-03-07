@@ -1,23 +1,11 @@
 ---
 lang: en
----
-title: TransparentPay
-description: Платежная система для прозрачного финансирования благотворительных проектов
+title: Payment Systems
+description: Integrations with payment gateways and financial APIs
 category: FinTech
-icon: bx bx-rocket
-info: Платежная система
-link: http://fintech.com
+icon: bx bx-credit-card
+info: International payment flow support
+link: http://example.com
+---
 
-###Система TransparentPay 
-
-TransparentPay – это мультибанковская система платежей по пластиковым и виртуальным картам через Интернет, позволяющая в реальном времени производить авторизацию и обработку транcакций.
-
-В дополнение к стандартному набору карт VISA, MasterCard, имеется возможность оплаты электронной наличностью – WebMoney, Яндекс.Деньги, e-port, QIWI, Kredit Pilot в рамках единого пользовательского интерфейса.
-
-Имеется возможность изменения дизайна платёжных страниц.
-
-Интернет-магазин должен заключить договор с TransparentPay и уполномоченным банком, через который TransparentPay будет переводить поступившие за товар или услуги платежи.
-
-Абонентской платы нет.
-
-В зависимости от вида товаров и услуг интернет-магазина возможно потребуется внести страховой депозит.
+Design and implementation of payment integrations: transaction processing, status tracking, idempotency, and secure webhook handling.

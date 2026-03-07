@@ -1,13 +1,12 @@
 ---
 lang: en
----
-﻿title: Система авторизации в Django 
-date: 2022-06-16
-description: Создаем модуль авторизации и разграничиваем права
+title: Authentication in Django
+date: 2022-06-06
+description: User registration, login, and permissions
 tag: django
-project: Курс по Django для начинающих
-platform: Django Практикум
+project: Django Course
+platform: Django Workshop
 link: http://example.com
+---
 
-
-В этом уроке мы покажем вам, как разрешить пользователям входить на ваш сайт со своими учётными записями и как управлять тем, что они могут делать и видеть на основе того, зарегистрированы ли они или нет, и их допусках. В рамках этой демонстрации мы расширим сайт местной библиотеки, добавив страницы входа и выхода, а также страницы пользователей и персональные страницы для просмотра книг, которые были взяты на руки.
+Django includes a built-in authentication system. It provides tools for login, logout, access control, password hashing, and permissions. You can quickly implement a secure user flow and then customize it for project-specific needs.

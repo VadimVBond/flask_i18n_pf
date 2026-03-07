@@ -1,24 +1,20 @@
 ---
 lang: en
----
-﻿title: Веб-скрапинг с помощью Python
+title: Web Scraping with Python
 date: 2022-06-09
-description: Обсуждаем скрапинг динамических страниц
+description: Scraping dynamic pages effectively
 tag: python
-project: Курс по Python для продвинутых
-platform: Python Практикум
+project: Advanced Python Course
+platform: Python Workshop
 link: http://example.com
+---
 
-Представьте, что мы хотим произвести скрапинг платформы, содержащей общедоступные объявления о недвижимости. Мы хотим получить цену недвижимости, ее адрес, расстояние, название станции и ближайший до нее тип транспорта для того, чтобы узнать, как цены на недвижимость распределяются в зависимости от доступности общественного транспорта в конкретном городе.
+Suppose we need to scrape public real-estate listings and collect price, address, and transport accessibility data. A robust scraping strategy should answer several questions:
 
-Предположим, что запрос приведет к странице результатов, которая выглядит следующим образом:
-Результаты поиск для скрапинга на Python
-Как только мы узнаем, в каких элементах сайта хранятся необходимые данные, нам нужно придумать логику скрапинга, которая позволит нам получить всю нужную информацию из каждого объявления.
-Нам предстоит ответить на следующие вопросы:
+- How to extract one field from one listing?
+- How to extract all fields from one page?
+- How to collect data from all paginated pages?
+- How to normalize mixed value types (for example, numeric prices vs “price on request”)?
+- How to parse compound fields like “0.5 miles to subway station XY”?
 
-* Как получить одну точку данных для одного свойства (например данные из тега price в первом объявлении)?
-* Как получить все точки данных для одного свойства со всей страницы (например все теги price с одной страницы)?
-* Как получить все точки данных для одного свойства всех страниц с результатами (например все теги price со всех страниц с результатами)?
-* Как устранить несоответствие, когда данные могут быть разных типов (например, есть некоторые объявления, в которых в поле цены указана цена по запросу. В конечном итоге у нас будет столбец, состоящий из числовых и строковых значений, что в нашем случае не позволяет провести анализ)?
-* Как лучше извлечь сложную информацию (Например, предположим, что каждое объявление содержит информацию об общественном транспорте, например “0,5 мили до станции метро XY”)?
-
+Reliable scraping requires careful selector design, pagination handling, and post-processing of extracted values.

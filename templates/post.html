@@ -15,10 +15,10 @@ body::before {
           <div class="col-lg-8 portfolio-info">
             <h3>{{ post.description }}</h3>
             <ul>
-              <li><strong>Категория</strong>: {{ post.tag.title() }}</li>
-              <li><strong>Проект</strong>: {{ post.project }}</li>
-              <li><strong>Статья опубликована</strong>: {{ post.date }}</li>
-              <li><strong>Платформа</strong>: <a href="{{ post.link }}">{{ post.platform}}</a></li>
+              <li><strong>{{ t('category') }}</strong>: {{ post.tag.title() }}</li>
+              <li><strong>{{ t('project') }}</strong>: {{ post.project }}</li>
+              <li><strong>{{ t('published') }}</strong>: {{ post.date }}</li>
+              <li><strong>{{ t('platform') }}</strong>: <a href="{{ post.link }}">{{ post.platform}}</a></li>
             </ul>
             <p>
               {{ post.html|safe }}
