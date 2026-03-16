@@ -364,21 +364,21 @@ def page_not_found(e):
 @freezer.register_generator
 def index_generator():
     for lang in SUPPORTED_LANGS:
-        yield {"lang": lang}
+        yield "index", {"lang": lang}
 
 
 @freezer.register_generator
-def blog():
+def blog_generator():
     for lang in SUPPORTED_LANGS:
         for p in _get_pages_for_lang(lang, POST_DIR):
-            yield {"lang": lang, "name": p.path.split("/")[-1]}
+            yield "blog", {"lang": lang, "name": p.path.split("/")[-1]}
 
 
 @freezer.register_generator
-def portfolio():
+def portfolio_generator():
     for lang in SUPPORTED_LANGS:
         for c in _get_pages_for_lang(lang, PORT_DIR):
-            yield {"lang": lang, "name": c.path.split("/")[-1]}
+            yield "portfolio", {"lang": lang, "name": c.path.split("/")[-1]}
 
 
 # --- Main ---
