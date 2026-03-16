@@ -9,7 +9,7 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
 # Относительные URL для GitHub Pages
-FREEZER_RELATIVE_URLS = True
+#FREEZER_RELATIVE_URLS = True
 POST_DIR = 'posts'
 PORT_DIR = 'portfolio'
 
@@ -199,6 +199,7 @@ LOCALIZED_SETTINGS = {
 }
 
 app = Flask(__name__)
+app.config['FREEZER_RELATIVE_URLS'] = True
 app.config.from_object(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
@@ -348,20 +349,20 @@ def page_not_found(e):
 
 
 @freezer.register_generator
-def index_generator():
+def index():
     for lang in SUPPORTED_LANGS:
         yield {'lang': lang}
 
 
 @freezer.register_generator
-def blog_generator():
+def blog():
     for lang in SUPPORTED_LANGS:
         for p in _get_pages_for_lang(lang, POST_DIR):
             yield {'lang': lang, 'name': p.path.split('/')[-1]}
 
 
 @freezer.register_generator
-def portfolio_generator():
+def portfolio():
     for lang in SUPPORTED_LANGS:
         for c in _get_pages_for_lang(lang, PORT_DIR):
             yield {'lang': lang, 'name': c.path.split('/')[-1]}
