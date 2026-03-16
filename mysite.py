@@ -206,7 +206,7 @@ app.config["FREEZER_RELATIVE_URLS"] = True
 
 app.config.from_object(__name__)
 flatpages = FlatPages(app)
-freezer = Freezer(app)
+freezer = Freezer(app, with_static_files=True)
 
 
 def _detect_lang_from_request():
