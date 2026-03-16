@@ -199,6 +199,7 @@ LOCALIZED_SETTINGS = {
 }
 
 app = Flask(__name__)
+app.config['FREEZER_RELATIVE_URLS'] = True
 app.config.from_object(__name__)
 flatpages = FlatPages(app)
 freezer = Freezer(app)
