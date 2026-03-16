@@ -8,6 +8,8 @@ DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
+# Относительные URL для GitHub Pages
+FREEZER_RELATIVE_URLS = True
 POST_DIR = 'posts'
 PORT_DIR = 'portfolio'
 
@@ -343,16 +345,20 @@ def page_not_found(e):
 
 
 # --- Frozen-Flask generators ---
+
+
 @freezer.register_generator
 def index_generator():
     for lang in SUPPORTED_LANGS:
         yield {'lang': lang}
+
 
 @freezer.register_generator
 def blog_generator():
     for lang in SUPPORTED_LANGS:
         for p in _get_pages_for_lang(lang, POST_DIR):
             yield {'lang': lang, 'name': p.path.split('/')[-1]}
+
 
 @freezer.register_generator
 def portfolio_generator():
