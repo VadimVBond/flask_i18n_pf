@@ -9,7 +9,7 @@ FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = ".md"
 FLATPAGES_ROOT = "content"
 # Относительные URL для GitHub Pages
-# FREEZER_RELATIVE_URLS = True
+FREEZER_BASE_URL = "https://Vadimchik.github.io/flask_i18n_pf"
 POST_DIR = "posts"
 PORT_DIR = "portfolio"
 
@@ -202,7 +202,7 @@ LOCALIZED_SETTINGS = {
 
 app = Flask(__name__)
 # Использовать относительные URLs для правильной работы GitHub Pages
-app.config["FREEZER_RELATIVE_URLS"] = True
+
 
 app.config.from_object(__name__)
 flatpages = FlatPages(app)
