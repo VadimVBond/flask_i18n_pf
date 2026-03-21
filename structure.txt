@@ -1,0 +1,571 @@
+Структура папок тома SSD WEB
+Серийный номер тома: 0C62-07F7
+M:.
+|   .gitignore
+|   app.py
+|   config.py
+|   generators.py
+|   README.md
+|   requirements.txt
+|   settings.json
+|   structure.txt
+|   translate_content.py
+|   tree.txt
+|   
++---.ai
+|       AGENTS.md
+|       AI_CHANGELOG.md
+|       AI_RULES.md
+|       analysis_results.md
+|       PROJECT_CONTEXT.md
+|       REPO_MAP.md
+|       TASK_PROMPTS.md
+|       
++---.github
+|   \---workflows
+|           gh-pages.yml
+|           
++---.ruff_cache
+|   |   .gitignore
+|   |   CACHEDIR.TAG
+|   |   
+|   \---0.15.5
+|           18350351073078128838
+|           
++---.vscode
+|       settings.json
+|       
++---blueprints
+|   \---main
+|       |   routes.py
+|       |   
+|       \---__pycache__
+|               routes.cpython-313.pyc
+|               
++---build
+|   |   index.html
+|   |   pygments.css
+|   |   
+|   +---en
+|   |   |   index.html
+|   |   |   
+|   |   +---blog
+|   |   |   +---fifth_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---first_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---forth_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---login_in_django
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---models_in_django
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---parsing_with_python
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---scraping
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---second_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   \---third_article
+|   |   |           index.html
+|   |   |           
+|   |   \---portfolio
+|   |       +---blockchain
+|   |       |       index.html
+|   |       |       
+|   |       +---java_go
+|   |       |       index.html
+|   |       |       
+|   |       +---my_books
+|   |       |       index.html
+|   |       |       
+|   |       +---payment_systems
+|   |       |       index.html
+|   |       |       
+|   |       +---python_advanced
+|   |       |       index.html
+|   |       |       
+|   |       \---robocleaner
+|   |               index.html
+|   |               
+|   +---portfolio
+|   +---posts
+|   +---ru
+|   |   |   index.html
+|   |   |   
+|   |   +---blog
+|   |   |   +---fifth_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---first_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---forth_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---login_in_django
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---models_in_django
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---parsing_with_python
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---scraping
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   +---second_article
+|   |   |   |       index.html
+|   |   |   |       
+|   |   |   \---third_article
+|   |   |           index.html
+|   |   |           
+|   |   \---portfolio
+|   |       +---blockchain
+|   |       |       index.html
+|   |       |       
+|   |       +---java_go
+|   |       |       index.html
+|   |       |       
+|   |       +---my_books
+|   |       |       index.html
+|   |       |       
+|   |       +---payment_systems
+|   |       |       index.html
+|   |       |       
+|   |       +---python_advanced
+|   |       |       index.html
+|   |       |       
+|   |       \---robocleaner
+|   |               index.html
+|   |               
+|   +---static
+|   |   +---assets
+|   |   |   +---bootstrap
+|   |   |   |   +---css
+|   |   |   |   |       bootstrap-grid.css
+|   |   |   |   |       bootstrap-grid.css.map
+|   |   |   |   |       bootstrap-grid.min.css
+|   |   |   |   |       bootstrap-grid.min.css.map
+|   |   |   |   |       bootstrap-grid.rtl.css
+|   |   |   |   |       bootstrap-grid.rtl.css.map
+|   |   |   |   |       bootstrap-grid.rtl.min.css
+|   |   |   |   |       bootstrap-grid.rtl.min.css.map
+|   |   |   |   |       bootstrap-reboot.css
+|   |   |   |   |       bootstrap-reboot.css.map
+|   |   |   |   |       bootstrap-reboot.min.css
+|   |   |   |   |       bootstrap-reboot.min.css.map
+|   |   |   |   |       bootstrap-reboot.rtl.css
+|   |   |   |   |       bootstrap-reboot.rtl.css.map
+|   |   |   |   |       bootstrap-reboot.rtl.min.css
+|   |   |   |   |       bootstrap-reboot.rtl.min.css.map
+|   |   |   |   |       bootstrap-utilities.css
+|   |   |   |   |       bootstrap-utilities.css.map
+|   |   |   |   |       bootstrap-utilities.min.css
+|   |   |   |   |       bootstrap-utilities.min.css.map
+|   |   |   |   |       bootstrap-utilities.rtl.css
+|   |   |   |   |       bootstrap-utilities.rtl.css.map
+|   |   |   |   |       bootstrap-utilities.rtl.min.css
+|   |   |   |   |       bootstrap-utilities.rtl.min.css.map
+|   |   |   |   |       bootstrap.css
+|   |   |   |   |       bootstrap.css.map
+|   |   |   |   |       bootstrap.min.css
+|   |   |   |   |       bootstrap.min.css.map
+|   |   |   |   |       bootstrap.rtl.css
+|   |   |   |   |       bootstrap.rtl.css.map
+|   |   |   |   |       bootstrap.rtl.min.css
+|   |   |   |   |       bootstrap.rtl.min.css.map
+|   |   |   |   |       
+|   |   |   |   \---js
+|   |   |   |           bootstrap.bundle.js
+|   |   |   |           bootstrap.bundle.js.map
+|   |   |   |           bootstrap.bundle.min.js
+|   |   |   |           bootstrap.bundle.min.js.map
+|   |   |   |           bootstrap.esm.js
+|   |   |   |           bootstrap.esm.js.map
+|   |   |   |           bootstrap.esm.min.js
+|   |   |   |           bootstrap.esm.min.js.map
+|   |   |   |           bootstrap.js
+|   |   |   |           bootstrap.js.map
+|   |   |   |           bootstrap.min.js
+|   |   |   |           bootstrap.min.js.map
+|   |   |   |           
+|   |   |   +---bootstrap-icons
+|   |   |   |   |   bootstrap-icons.css
+|   |   |   |   |   bootstrap-icons.json
+|   |   |   |   |   index.html
+|   |   |   |   |   
+|   |   |   |   \---fonts
+|   |   |   |           bootstrap-icons.woff
+|   |   |   |           bootstrap-icons.woff2
+|   |   |   |           
+|   |   |   +---boxicons
+|   |   |   |   +---css
+|   |   |   |   |       animations.css
+|   |   |   |   |       boxicons.css
+|   |   |   |   |       boxicons.min.css
+|   |   |   |   |       transformations.css
+|   |   |   |   |       
+|   |   |   |   \---fonts
+|   |   |   |           boxicons.eot
+|   |   |   |           boxicons.svg
+|   |   |   |           boxicons.ttf
+|   |   |   |           boxicons.woff
+|   |   |   |           boxicons.woff2
+|   |   |   |           
+|   |   |   +---glightbox
+|   |   |   |   +---css
+|   |   |   |   |       glightbox.css
+|   |   |   |   |       glightbox.min.css
+|   |   |   |   |       
+|   |   |   |   \---js
+|   |   |   |           glightbox.js
+|   |   |   |           glightbox.min.js
+|   |   |   |           
+|   |   |   +---isotope-layout
+|   |   |   |       isotope.pkgd.js
+|   |   |   |       isotope.pkgd.min.js
+|   |   |   |       
+|   |   |   +---purecounter
+|   |   |   |       purecounter.js
+|   |   |   |       
+|   |   |   +---remixicon
+|   |   |   |       remixicon.css
+|   |   |   |       remixicon.eot
+|   |   |   |       remixicon.less
+|   |   |   |       remixicon.svg
+|   |   |   |       remixicon.symbol.svg
+|   |   |   |       remixicon.ttf
+|   |   |   |       remixicon.woff
+|   |   |   |       remixicon.woff2
+|   |   |   |       
+|   |   |   +---swiper
+|   |   |   |       swiper-bundle.min.css
+|   |   |   |       swiper-bundle.min.js
+|   |   |   |       
+|   |   |   \---waypoints
+|   |   |           noframework.waypoints.js
+|   |   |           
+|   |   +---css
+|   |   |       style.css
+|   |   |       
+|   |   +---img
+|   |   |   |   bg.jpg
+|   |   |   |   favicon.ico
+|   |   |   |   favicon.png
+|   |   |   |   logo.ico
+|   |   |   |   me.jpg
+|   |   |   |   
+|   |   |   \---portfolio
+|   |   |           portfolio-1.jpg
+|   |   |           post.jpg
+|   |   |           
+|   |   \---js
+|   |           main.js
+|   |           
+|   \---uk
+|       |   index.html
+|       |   
+|       +---blog
+|       |   +---fifth_article
+|       |   |       index.html
+|       |   |       
+|       |   +---first_article
+|       |   |       index.html
+|       |   |       
+|       |   +---forth_article
+|       |   |       index.html
+|       |   |       
+|       |   +---login_in_django
+|       |   |       index.html
+|       |   |       
+|       |   +---models_in_django
+|       |   |       index.html
+|       |   |       
+|       |   +---parsing_with_python
+|       |   |       index.html
+|       |   |       
+|       |   +---scraping
+|       |   |       index.html
+|       |   |       
+|       |   +---second_article
+|       |   |       index.html
+|       |   |       
+|       |   \---third_article
+|       |           index.html
+|       |           
+|       \---portfolio
+|           +---blockchain
+|           |       index.html
+|           |       
+|           +---java_go
+|           |       index.html
+|           |       
+|           +---my_books
+|           |       index.html
+|           |       
+|           +---payment_systems
+|           |       index.html
+|           |       
+|           +---python_advanced
+|           |       index.html
+|           |       
+|           \---robocleaner
+|                   index.html
+|                   
++---codex_patches
++---content
+|   |   loader.py
+|   |   
+|   +---en
+|   |   +---portfolio
+|   |   |       blockchain.md
+|   |   |       java_go.md
+|   |   |       my_books.md
+|   |   |       payment_systems.md
+|   |   |       python_advanced.md
+|   |   |       robocleaner.md
+|   |   |       
+|   |   \---posts
+|   |           fifth_article.md
+|   |           first_article.md
+|   |           forth_article.md
+|   |           login_in_django.md
+|   |           models_in_django.md
+|   |           parsing_with_python.md
+|   |           scraping.md
+|   |           second_article.md
+|   |           third_article.md
+|   |           
+|   +---portfolio
+|   |       blockchain.md
+|   |       java_go.md
+|   |       my_books.md
+|   |       payment_systems.md
+|   |       python_advanced.md
+|   |       robocleaner.md
+|   |       
+|   +---posts
+|   |       fifth_article.md
+|   |       first_article.md
+|   |       forth_article.md
+|   |       login_in_django.md
+|   |       models_in_django.md
+|   |       parsing_with_python.md
+|   |       scraping.md
+|   |       second_article.md
+|   |       third_article.md
+|   |       
+|   +---ru
+|   |   +---portfolio
+|   |   |       blockchain.md
+|   |   |       java_go.md
+|   |   |       my_books.md
+|   |   |       payment_systems.md
+|   |   |       python_advanced.md
+|   |   |       robocleaner.md
+|   |   |       
+|   |   \---posts
+|   |           fifth_article.md
+|   |           first_article.md
+|   |           forth_article.md
+|   |           login_in_django.md
+|   |           models_in_django.md
+|   |           parsing_with_python.md
+|   |           scraping.md
+|   |           second_article.md
+|   |           third_article.md
+|   |           
+|   +---uk
+|   |   +---portfolio
+|   |   |       blockchain.md
+|   |   |       java_go.md
+|   |   |       my_books.md
+|   |   |       payment_systems.md
+|   |   |       python_advanced.md
+|   |   |       robocleaner.md
+|   |   |       
+|   |   \---posts
+|   |           fifth_article.md
+|   |           first_article.md
+|   |           forth_article.md
+|   |           login_in_django.md
+|   |           models_in_django.md
+|   |           parsing_with_python.md
+|   |           scraping.md
+|   |           second_article.md
+|   |           third_article.md
+|   |           
+|   \---__pycache__
+|           loader.cpython-313.pyc
+|           
++---i18n
+|   |   context.py
+|   |   core.py
+|   |   en.json
+|   |   ru.json
+|   |   translations.py
+|   |   uk.json
+|   |   __init__.py
+|   |   
+|   \---__pycache__
+|           context.cpython-313.pyc
+|           core.cpython-313.pyc
+|           translations.cpython-313.pyc
+|           __init__.cpython-313.pyc
+|           
++---output
+|       content.json
+|       
++---static
+|   +---assets
+|   |   +---bootstrap
+|   |   |   +---css
+|   |   |   |       bootstrap-grid.css
+|   |   |   |       bootstrap-grid.css.map
+|   |   |   |       bootstrap-grid.min.css
+|   |   |   |       bootstrap-grid.min.css.map
+|   |   |   |       bootstrap-grid.rtl.css
+|   |   |   |       bootstrap-grid.rtl.css.map
+|   |   |   |       bootstrap-grid.rtl.min.css
+|   |   |   |       bootstrap-grid.rtl.min.css.map
+|   |   |   |       bootstrap-reboot.css
+|   |   |   |       bootstrap-reboot.css.map
+|   |   |   |       bootstrap-reboot.min.css
+|   |   |   |       bootstrap-reboot.min.css.map
+|   |   |   |       bootstrap-reboot.rtl.css
+|   |   |   |       bootstrap-reboot.rtl.css.map
+|   |   |   |       bootstrap-reboot.rtl.min.css
+|   |   |   |       bootstrap-reboot.rtl.min.css.map
+|   |   |   |       bootstrap-utilities.css
+|   |   |   |       bootstrap-utilities.css.map
+|   |   |   |       bootstrap-utilities.min.css
+|   |   |   |       bootstrap-utilities.min.css.map
+|   |   |   |       bootstrap-utilities.rtl.css
+|   |   |   |       bootstrap-utilities.rtl.css.map
+|   |   |   |       bootstrap-utilities.rtl.min.css
+|   |   |   |       bootstrap-utilities.rtl.min.css.map
+|   |   |   |       bootstrap.css
+|   |   |   |       bootstrap.css.map
+|   |   |   |       bootstrap.min.css
+|   |   |   |       bootstrap.min.css.map
+|   |   |   |       bootstrap.rtl.css
+|   |   |   |       bootstrap.rtl.css.map
+|   |   |   |       bootstrap.rtl.min.css
+|   |   |   |       bootstrap.rtl.min.css.map
+|   |   |   |       
+|   |   |   \---js
+|   |   |           bootstrap.bundle.js
+|   |   |           bootstrap.bundle.js.map
+|   |   |           bootstrap.bundle.min.js
+|   |   |           bootstrap.bundle.min.js.map
+|   |   |           bootstrap.esm.js
+|   |   |           bootstrap.esm.js.map
+|   |   |           bootstrap.esm.min.js
+|   |   |           bootstrap.esm.min.js.map
+|   |   |           bootstrap.js
+|   |   |           bootstrap.js.map
+|   |   |           bootstrap.min.js
+|   |   |           bootstrap.min.js.map
+|   |   |           
+|   |   +---bootstrap-icons
+|   |   |   |   bootstrap-icons.css
+|   |   |   |   bootstrap-icons.json
+|   |   |   |   index.html
+|   |   |   |   
+|   |   |   \---fonts
+|   |   |           bootstrap-icons.woff
+|   |   |           bootstrap-icons.woff2
+|   |   |           
+|   |   +---boxicons
+|   |   |   +---css
+|   |   |   |       animations.css
+|   |   |   |       boxicons.css
+|   |   |   |       boxicons.min.css
+|   |   |   |       transformations.css
+|   |   |   |       
+|   |   |   \---fonts
+|   |   |           boxicons.eot
+|   |   |           boxicons.svg
+|   |   |           boxicons.ttf
+|   |   |           boxicons.woff
+|   |   |           boxicons.woff2
+|   |   |           
+|   |   +---glightbox
+|   |   |   +---css
+|   |   |   |       glightbox.css
+|   |   |   |       glightbox.min.css
+|   |   |   |       
+|   |   |   \---js
+|   |   |           glightbox.js
+|   |   |           glightbox.min.js
+|   |   |           
+|   |   +---isotope-layout
+|   |   |       isotope.pkgd.js
+|   |   |       isotope.pkgd.min.js
+|   |   |       
+|   |   +---purecounter
+|   |   |       purecounter.js
+|   |   |       
+|   |   +---remixicon
+|   |   |       remixicon.css
+|   |   |       remixicon.eot
+|   |   |       remixicon.less
+|   |   |       remixicon.svg
+|   |   |       remixicon.symbol.svg
+|   |   |       remixicon.ttf
+|   |   |       remixicon.woff
+|   |   |       remixicon.woff2
+|   |   |       
+|   |   +---swiper
+|   |   |       swiper-bundle.min.css
+|   |   |       swiper-bundle.min.js
+|   |   |       
+|   |   \---waypoints
+|   |           noframework.waypoints.js
+|   |           
+|   +---css
+|   |       style.css
+|   |       
+|   +---img
+|   |   |   bg.jpg
+|   |   |   favicon.ico
+|   |   |   favicon.png
+|   |   |   logo.ico
+|   |   |   me.jpg
+|   |   |   
+|   |   \---portfolio
+|   |           portfolio-1.jpg
+|   |           post.jpg
+|   |           
+|   \---js
+|           main.js
+|           
++---templates
+|       404.html
+|       base.html
+|       blog.html
+|       card.html
+|       contacts.html
+|       counters.html
+|       header.html
+|       index.html
+|       interests.html
+|       portfolio.html
+|       post.html
+|       resume.html
+|       skills.html
+|       
+\---__pycache__
+        config.cpython-313.pyc
+        generators.cpython-313.pyc
+        
