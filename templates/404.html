@@ -15,7 +15,7 @@
                 <h2>{{ t('error_404') }}</h2>
                 <div class="error-details">{{ t('page_not_found') }}</div>
                 <div class="error-actions">
-                    <a href="{{ url_for('index', lang=current_lang) }}" class="btn btn-primary btn-lg">{{ t('back_home') }}</a>
+                    <a href="{{ url_for('main.index', lang=current_lang) }}" class="btn btn-primary btn-lg">{{ t('back_home') }}</a>
                 </div>
             </div>
         </div>

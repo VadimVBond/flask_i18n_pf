@@ -37,15 +37,15 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
       <div class="language-switcher" aria-label="Language switcher">
-        <a href="{{ url_for('index', lang='ru') }}"
+        <a href="{{ url_for('main.index', lang='ru') }}"
            class="language-flag{% if lang == 'ru' %} active{% endif %}"
            title="Русский"
            aria-label="Русский">🇷🇺</a>
-        <a href="{{ url_for('index', lang='en') }}"
+        <a href="{{ url_for('main.index', lang='en') }}"
            class="language-flag{% if lang == 'en' %} active{% endif %}"
            title="English"
            aria-label="English">🇬🇧</a>
-        <a href="{{ url_for('index', lang='uk') }}"
+        <a href="{{ url_for('main.index', lang='uk') }}"
            class="language-flag{% if lang == 'uk' %} active{% endif %}"
            title="Українська"
            aria-label="Українська">🇺🇦</a>
